@@ -1,8 +1,0 @@
-# Cloudflare Pages redirects
-# Acro yoga was linked at two addresses; keep one canonical URL.
-/services/acro-yoga/        /acro-yoga/                301
-/services/acro-yoga         /acro-yoga/                301
-
-# Old WordPress-style paths, in case any are cached or linked
-/index.php                  /                          301
-/wp-login.php               /contact/                  301
