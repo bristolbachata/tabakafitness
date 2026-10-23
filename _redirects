@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects
+# Old .html names from the first design draft, in case they were shared.
+/index.html                 /                                               301
+/personal-training-bristol.html  /personal-training-bristol/                301
+/online-coaching.html       /online-personal-training-nutrition/            301
+/services.html              /services/                                      301
+/contact.html               /contact/                                       301
+/wp-login.php               /contact/                                       301
