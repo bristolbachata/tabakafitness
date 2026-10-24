@@ -227,3 +227,37 @@ address{font-style:normal}
   .hero{min-height:0;margin:0}.hero-bg{display:none}.hero::before{display:none}
   body{background:#fff;color:#000}
 }
+
+/* Price cards: checklists inside cards, whole-card link */
+.pcard{position:relative;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.pcard:hover{border-color:rgba(255,106,0,.45)}
+.pcard .checks{margin:.3rem 0 .6rem;font-size:.95rem;color:var(--muted);gap:.7rem}
+.pcard .checks strong{color:var(--ink)}
+.pcard .stretch::after{content:"";position:absolute;inset:0;border-radius:var(--radius)}
+.pcard:has(.stretch):hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(255,106,0,.12)}
+
+/* Cookie consent */
+.js-only{display:none!important}
+.js .js-only{display:inline-flex!important}
+.cc{position:fixed;z-index:140;left:1rem;bottom:1rem;width:min(30rem,calc(100% - 2rem));background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.25rem 1.35rem;box-shadow:0 24px 70px rgba(0,0,0,.7);animation:rise .5s var(--ease) both}
+.cc [hidden]{display:none!important}
+.cc .cc-title{font-size:1.1rem;line-height:1.2;margin:0 0 .45rem;text-transform:none;letter-spacing:0;font-weight:800}
+.cc p{margin:0 0 .9rem;color:var(--muted);font-size:.95rem;line-height:1.5}
+.cc-actions{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.cc-row{display:flex;gap:.75rem;align-items:flex-start;margin:0 0 .75rem;font-size:.93rem;color:var(--muted);cursor:pointer}
+.cc-row b{display:block;color:var(--ink)}
+.cc-row input{flex:none;margin-top:.2rem;width:1.2rem;height:1.2rem;accent-color:var(--a1)}
+.cc-link{background:none;border:0;color:var(--link);font:700 .95rem var(--font);text-decoration:underline;cursor:pointer;min-height:44px;padding:0 .6rem}
+@media (max-width:899px){.cc{left:.5rem;right:.5rem;bottom:.5rem;width:auto}}
+@media print{.cc{display:none}}
+
+/* Footer cookie-settings button + legal documents */
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--muted);cursor:pointer;min-height:36px;align-items:center}
+.linkbtn:hover{color:var(--ink);text-decoration:underline}
+.legal-doc h2{font-size:1.5rem;margin:2.2rem 0 .6rem}
+.legal-doc h2:first-of-type{margin-top:1rem}
+.legal-doc ul{padding-left:1.2rem;margin:0 0 1em}
+.legal-doc li{margin-bottom:.4rem}
+
+/* Price card units on their own line so all four cards align */
+.pcard .amount span{display:block;margin-top:.3rem}

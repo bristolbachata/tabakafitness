@@ -1,5 +1,4 @@
-# Allow all search engines and AI search crawlers.
 User-agent: *
 Allow: /
 
-Sitemap: https://bristolbachata.co.uk/sitemap.xml
+Sitemap: https://tabakafitness.com/sitemap.xml

@@ -6,13 +6,22 @@ Static, no-framework site (one tiny optional script, `assets/site.js`, for the m
 /nutritional-consultation-body-composition-assesment/ · /online-personal-training-nutrition/ ·
 /bristol-bachata/ · /testimonials/ · /personal-trainer-bristol/ · /contact/
 
-Also included: `assets/styles.css`, `assets/site.js`, `assets/favicon.svg`, `sitemap.xml`, `robots.txt`, `404.html`, `_redirects`, `_headers`.
+New pages: /privacy-policy/ and /cookie-policy/ (linked in the footer only).
+
+Also included: `assets/styles.css`, `assets/site.js`, `assets/consent.js`, `assets/favicon.svg`, `sitemap.xml`, `robots.txt`, `404.html`, `_redirects`, `_headers`.
 
 ## Design (v2)
 Dark, bold look inspired by bristolbachata.co.uk: full-bleed hero, orange-on-black theme (gradient from deep orange to amber), sticky glass header with progress bar, scrolling ticker, pricing cards, masonry testimonials and a mobile Call / WhatsApp / Book bar. Sections fade in as you scroll; this is switched off automatically for visitors who prefer reduced motion, and content is fully visible if JavaScript is off.
 Colours and sizes live at the top of `assets/styles.css` (`--a1`, `--a2`, `--a3` are the gradient colours).
 
-## Please confirm before going live (conflicts found on the old site)
+## Cookies and legal pages
+- A consent banner (Accept all / Reject non-essential / Customise) appears on first visit; the choice is remembered for 12 months and can be changed from **Cookie settings** in the footer or on the cookie policy page.
+- **Analytics is off until you add your ID.** Open `assets/consent.js` and paste your GA4 Measurement ID (looks like `G-XXXXXXXXXX`) into `GA_ID`. Google Analytics then loads only after someone accepts, and is switched off and its cookies removed if they withdraw. With `GA_ID` empty, no analytics code is ever loaded.
+- The privacy and cookie policies are sensible templates written from what this site does. Please read them, correct anything that does not match how you work (for example providers you use or how long you keep client records), and consider getting them checked. Also check whether you need to pay the ICO data protection fee.
+- The site itself sets no cookies other than your consent choice (stored in the browser).
+
+## Please confirm before going live
+0. **Initial consultation price** – the homepage card says "60 min" with no price because none was given. The Nutrition page still lists a 60-minute nutritional consultation + body composition at £60; if that is the same session, tell me and I will add the price to the homepage and align the pages. (conflicts found on the old site)
 1. **Address** – used `LA Gym, 20 Easton Rd, Bristol BS5 0BY`. Old about page mentions "Synergi Training Space"; directories show other addresses.
 2. **Email** – used `jantabaka@gmail.com` (homepage/contact). The old About page lists `jan@tabakafitness.com`.
 3. **Prices** – personal training is £65 per session, with packages tailored at the consultation (as you confirmed). Other prices are unchanged from the old site and still need confirming: body composition assessment £30, nutritional consultation + assessment £60, the online prices (discounted figures from the old online page, "lockdown" wording removed), Thai massage £40/£55.
