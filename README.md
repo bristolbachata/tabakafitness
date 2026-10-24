@@ -1,42 +1,50 @@
-# Tabaka Fitness website, v2
+# Tabaka Fitness – rebuilt website
 
-Static site on the approved dark design. No build step: upload the folder and deploy.
+Static, no-framework site (one tiny optional script, `assets/site.js`, for the mobile menu, scroll progress bar and scroll-reveal effects; everything works without it). All 11 original URLs are unchanged (each lives in its own folder as `index.html`):
 
-## Pages
+/ · /services/ · /personal-training-bristol/ · /acro-yoga/ · /thai-yoga-massage/ ·
+/nutritional-consultation-body-composition-assesment/ · /online-personal-training-nutrition/ ·
+/bristol-bachata/ · /testimonials/ · /personal-trainer-bristol/ · /contact/
 
-| Page | URL |
-|---|---|
-| Home | `/` |
-| Services | `/services/` |
-| Face-to-face PT | `/personal-training-bristol/` |
-| About Jan | `/personal-trainer-bristol/` |
-| Online coaching | `/online-personal-training-nutrition/` |
-| Body composition | `/nutritional-consultation-body-composition-assesment/` |
-| Thai yoga massage | `/thai-yoga-massage/` |
-| Acro yoga (paused) | `/acro-yoga/` |
-| Bristol Bachata | `/bristol-bachata/` (links to bristolbachata.co.uk) |
-| Testimonials | `/testimonials/` |
-| Contact | `/contact/` |
-| Not found | `404.html` |
+Also included: `assets/styles.css`, `assets/site.js`, `assets/favicon.svg`, `sitemap.xml`, `robots.txt`, `404.html`, `_redirects`, `_headers`.
 
-## Before going live
+## Design (v2)
+Dark, bold look inspired by bristolbachata.co.uk: full-bleed hero, orange-on-black theme (gradient from deep orange to amber), sticky glass header with progress bar, scrolling ticker, pricing cards, masonry testimonials and a mobile Call / WhatsApp / Book bar. Sections fade in as you scroll; this is switched off automatically for visitors who prefer reduced motion, and content is fully visible if JavaScript is off.
+Colours and sizes live at the top of `assets/styles.css` (`--a1`, `--a2`, `--a3` are the gradient colours).
 
-1. **Add Jan's photo** at `assets/images/jan-tabaka.jpg`. Pages use it on the homepage and About page. Without it, those spots show a broken image.
-2. **Check these items** against the live business:
-   - Address: the pages use "LA Gym, 20 Easton Road, BS5 0BY" from a directory listing. Confirm it. The contact card just says "LA Gym, Bristol BS5 0BY".
-   - Qualification: "BSc Sports and Exercise Science". The current site has a typo, and listings differ.
-   - Personal training: £65 per one-hour session. Packages are discussed at the first session.
-   - Body composition: £30 for 30 minutes, £60 for the one-hour nutritional analysis.
-   - Online coaching: prices are "get in touch", as agreed. The package names and inclusions come from your draft.
-   - Testimonials: confirm each client has agreed to their quote being published. Remove any you cannot confirm.
-   - Bachata: "featured on BBC One and BBC Four" and "13+ years" come from bristolbachata content. Confirm.
-   - Phone, email and WhatsApp number.
-3. **Remove** any draft claims you no longer want: none are left in the copy except the items above.
+## Please confirm before going live (conflicts found on the old site)
+1. **Address** – used `LA Gym, 20 Easton Rd, Bristol BS5 0BY`. Old about page mentions "Synergi Training Space"; directories show other addresses.
+2. **Email** – used `jantabaka@gmail.com` (homepage/contact). The old About page lists `jan@tabakafitness.com`.
+3. **Prices** – personal training is £65 per session, with packages tailored at the consultation (as you confirmed). Other prices are unchanged from the old site and still need confirming: body composition assessment £30, nutritional consultation + assessment £60, the online prices (discounted figures from the old online page, "lockdown" wording removed), Thai massage £40/£55.
+4. **Experience** – 15+ years and "hundreds of clients trained", as you confirmed. "5,000+ hours of one-to-one training" is carried over from the old About page; check it still fits.
+5. **Acro yoga** – page says classes are paused (as on the old page).
+6. **Bachata venue/prices/events** – taken from the current homepage (Totos By The River, Mon & Wed). Update the events list as dates pass. Third-party listings (MoveGB etc.) still show older venues.
+7. **Image alt text** – written without being able to view the photos. Please check each one describes its image.
+8. **Photos** are hot-linked from `tabakafitness.com/wp-content/uploads/...` so they work once this is hosted on that domain.
 
-## Deploy (GitHub and Cloudflare Pages)
+## Content decisions
+- Thai massage precautions rewritten more cautiously ("speak to your GP"); removed the unrelated "Sydney plastic surgeons" text and some absolute medical claims.
+- Removed the long acroyoga essay (appeared to be reproduced from elsewhere) and replaced it with original wording.
+- Removed Calum's testimonial (Type 1 diabetes / insulin claim) as a health claim that shouldn't be made on a marketing page. Other testimonials are verbatim with spelling lightly corrected.
+- Online training video is a link rather than an embedded player (faster page).
 
-1. Create a new repo for this site only (for example `tabakafitness`) and push the folder.
-2. Cloudflare: Workers & Pages → Create → Pages → Connect to Git. Select the repo.
-3. Framework preset: None. Build command: empty. Output directory: `/`.
-4. Test on the `*.pages.dev` address, then add `tabakafitness.com` under Custom domains.
-5. Submit `https://tabakafitness.com/sitemap.xml` in Google Search Console.
+## Deploying
+- **Static hosting / replacing WordPress:** upload the folder contents to the site root.
+- **Keeping WordPress:** use these files as the design/content reference; keep Yoast's sitemap and robots, and copy the JSON-LD blocks and titles/descriptions into your SEO plugin.
+- Add 301 redirects: `/services/acro-yoga/` → `/acro-yoga/`, and `/home/personal-training/` → `/personal-training-bristol/`.
+
+## Still to do (not possible from here)
+- Claim/complete the Google Business Profile and keep name/address/phone identical everywhere.
+- Add a privacy/cookie notice if you use analytics (UK GDPR/PECR).
+- Validate the structured data at https://search.google.com/test/rich-results and run PageSpeed Insights after launch.
+
+## GitHub + Cloudflare Pages
+1. Create a GitHub repo and upload the *contents* of this folder (so `index.html` is at the repo root).
+2. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git → pick the repo.
+3. Framework preset: None. Build command: leave empty. Build output directory: `/` (root).
+4. Add the custom domain `tabakafitness.com` in Pages, then point DNS as Cloudflare instructs.
+5. `_redirects` and `_headers` are Cloudflare Pages files and are already included.
+
+**Before switching DNS:** download your photos from the WordPress server (`wp-content/uploads`), put them in an `assets/img/` folder and update the image paths – otherwise the images disappear when WordPress is switched off.
+**Search Console:** the Google verification tag is included; resubmit `https://tabakafitness.com/sitemap.xml`.
+**Analytics:** the old Google Site Kit tracking is not included – add your analytics tag if you want it (plus a cookie notice).
