@@ -73,6 +73,7 @@
 <p class="legal">© 2026 Tabaka Fitness, Bristol. Page content last updated <time datetime="2026-10-24">24 October 2026</time>. Individual results vary; this site offers general fitness information, not medical advice.</p>
 </div></footer>
 <div class="mobile-bar"><a href="tel:+447951514058">Call</a><a href="https://wa.me/447951514058">WhatsApp</a><a class="primary" href="/contact/">Book now</a></div>
-<script>(function(){var v=document.querySelector('[data-yt]');if(!v)return;var a=v.querySelector('.video-facade');if(!a)return;a.addEventListener('click',function(e){e.preventDefault();var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+v.getAttribute('data-yt')+'?autoplay=1&rel=0';f.title='Acro yoga video from Tabaka Fitness';f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;v.innerHTML='';v.appendChild(f);f.focus();});})();</script>
+
+<script>(function(){document.querySelectorAll('[data-yt]').forEach(function(v){var a=v.querySelector('.video-facade');if(!a)return;a.addEventListener('click',function(e){e.preventDefault();var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+v.getAttribute('data-yt')+'?autoplay=1&rel=0';f.title=v.getAttribute('data-title')||'Video';f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;v.innerHTML='';v.appendChild(f);f.focus();});});})();</script>
 </body>
 </html>
