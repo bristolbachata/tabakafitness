@@ -280,3 +280,9 @@ address{font-style:normal}
 .video-grid .video-facade .play::after{left:23px;top:18px;border-width:11px 0 11px 17px}
 .video-cap{margin:.75rem 0 0;color:var(--muted);font-size:.95rem}
 .video-cap strong{color:var(--ink)}
+.cc{width:min(24rem,calc(100% - 2rem));padding:1rem 1.1rem;border-radius:16px}
+.cc .cc-title{font-size:1rem;margin-bottom:.3rem}
+.cc p{font-size:.85rem;line-height:1.4;margin-bottom:.7rem}
+.cc-row{font-size:.85rem;margin-bottom:.5rem}
+.cc .btn,.cc .cc-link{min-height:40px;padding:.45rem 1rem;font-size:.85rem}
+@media (max-width:899px){.cc{left:.5rem;right:.5rem;bottom:.5rem;width:auto;padding:.8rem .9rem}.cc .cc-title{font-size:.95rem}.cc p{font-size:.8rem}}
