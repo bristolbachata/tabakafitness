@@ -131,7 +131,7 @@ section.alt{background:var(--bg2);border-block:1px solid var(--line)}
 .checks{list-style:none;padding:0;margin:0 0 1.2em;display:grid;gap:.55rem}
 .checks li{padding-left:1.9rem;position:relative}
 .checks li::before{content:"";position:absolute;left:0;top:.5em;width:.95rem;height:.5rem;border-left:3px solid var(--a2);border-bottom:3px solid var(--a2);transform:rotate(-45deg)}
-.two{display:grid;gap:2.5rem;align-items:center}
+.two{display:grid;gap:2.5rem;align-items:start}
 @media (min-width:900px){.two{grid-template-columns:1fr 1fr}.two.wide-left{grid-template-columns:1.25fr .75fr}}
 .figure{position:relative;isolation:isolate;margin:0}
 .figure::before{content:"";position:absolute;inset:-8% 0 auto auto;width:70%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(255,106,0,.4),transparent);z-index:-1;filter:blur(8px)}
@@ -140,7 +140,7 @@ section.alt{background:var(--bg2);border-block:1px solid var(--line)}
 .figure figcaption{font-size:.9rem;color:var(--muted);margin-top:.5rem}
 .facts{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));margin:1.25rem 0 0;padding:0;list-style:none}
 .facts li{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1rem 1.1rem}
-.facts b{display:block;font-size:2rem;line-height:1.05;letter-spacing:-.03em;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.facts b{display:block;font-size:1.6rem;line-height:1.05;letter-spacing:-.03em;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .facts span{font-size:.9rem;color:var(--muted)}
 
 /* Price cards */
