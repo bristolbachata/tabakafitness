@@ -85,7 +85,7 @@ p{margin:0 0 1em}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,10,10,.7) 0%,rgba(10,10,10,.45) 30%,rgba(10,10,10,.93) 100%),radial-gradient(60% 60% at 82% 18%,rgba(255,106,0,.3),transparent 70%)}
 .hero h1{font-size:clamp(2.4rem,1.2rem + 4.8vw,5rem);line-height:.95;letter-spacing:-.04em;max-width:none;margin-bottom:.4em}
 .hero h1 .slogan{display:block}
-.hero-sub{margin:.2rem 0 .9rem;font-size:clamp(1.5rem,1rem + 2vw,2.5rem);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1.15;color:var(--ink)}
+.hero-sub{margin:.2rem 0 .9rem;font-size:clamp(1.9rem,1.2rem + 2.6vw,3.2rem);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1.15;color:var(--ink)}
 .hero .lead{color:#e4e1e9;max-width:68ch;margin-bottom:0;font-size:clamp(.95rem,.9rem + .2vw,1.1rem)}
 .hero .eyebrow{font-size:.85rem}
 .hero-copy>*{animation:rise .9s var(--ease) both}
